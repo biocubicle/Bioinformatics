@@ -1,4 +1,8 @@
 #Working out the reverse complement of a strand
+
+#Input - Sequence of a strand 
+#Output - The reverse complement of that strand
+
 #Step I: Define a function that will call two other functions and return the processed pattern
 def ReverseComplement(Pattern):
     Pattern = Reverse(Pattern) # reverse a string
