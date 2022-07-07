@@ -1,4 +1,4 @@
-####Finding the frequency of a known pattern (k-mer) in a DNA sequence ####
+#Finding the frequency of a known pattern (k-mer) in a DNA sequence 
 
 #Input - DNA and pattern sequence 
 #Output - The frequency of that pattern in the DNA sequence provided
