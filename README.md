@@ -1,3 +1,16 @@
 # Bioinformatics
 It contains all the python scripts associated with basic sequence counting and manipulation! 
-The first file - Pattern count, is an algorithm that allows for the counting of frequency of a known k-mer (~DnaA box) in a given sequence (OriC in most cases). 
+
+
+Pattern Count: #Finding the frequency of a known pattern (k-mer) in a DNA sequence 
+#Input - DNA and pattern sequence 
+#Output - The frequency of that pattern in the DNA sequence provided
+
+Pattern Identification and frequency: #Finding the frequency of all possible patterns of a known length k in a DNA sequence 
+#Input - DNA sequence and the length of the pattern that we are looking for 
+#Output - A list of all the possible patterns and their frequency; from which we then print the patterns that appear maximum number of times. 
+
+
+Working out the reverse complement: #Working out the reverse complement of a strand
+#Input - Sequence of a strand 
+#Output - The reverse complement of that strand
