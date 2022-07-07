@@ -15,6 +15,23 @@ def Complement(Pattern): #figure out the complement
     transf = Pattern.maketrans("ATGC", "TACG") #we define a variable wherein we are calling a function: Pattern.maketrans(). This function requires three parametric inputs ('WHAT NEEDS TO BE CHANGED?','WHAT TO CHANGE IT TO?','WHAT TO DELETE?')
     Pattern = Pattern.translate(transf) #translate() makes the changes according to the inputs we give
     return Pattern
+
+#Another approach for the complement processing can be as follows: 
+#def Complement(Pattern):
+#    comp = ''
+#   for i in range (0, (len(Pattern))):
+#        changeChar = 'NA'
+#        if Pattern[i] == 'A':
+#            changeChar = 'T'
+#        elif Pattern[i] == 'C':
+#            changeChar = 'G'
+#        elif Pattern[i] == 'G':
+#            changeChar = 'C'
+#        elif Pattern[i] == 'T':
+#            changeChar = 'A'
+#        comp = comp + changeChar
+#    return comp
+
 #Step IV: Get an input from the user
 pat = str(input('Please enter a sequence for which the reverse complement needs to be processed: '))
 #Step V: Call the function and obtain the processed results
