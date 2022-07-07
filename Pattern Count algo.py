@@ -1,5 +1,8 @@
 ####Finding the frequency of a known pattern (k-mer) in a DNA sequence ####
 
+#Input - DNA and pattern sequence 
+#Output - The frequency of that pattern in the DNA sequence provided
+
 #Step I: Defining a function to count the frequency of a known K-mer (repeating pattern of a known length associated with the concept of DnaA boxes)in a known DNA/ORIC (origin of replication) sequence
 def PatternCount(sequence,pattern): #def allows us to define a function (in this case called PatternCount (with function parameter sequence and pattern - input to the function))
     count = 0 #initilaziation of the counting process (this will keep a record of the number of matches we find eventually)
