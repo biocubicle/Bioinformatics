@@ -1,4 +1,4 @@
-####Finding the frequency of all possible patterns of a known length k in a DNA sequence #####
+#Finding the frequency of all possible patterns of a known length k in a DNA sequence 
 
 #Input - DNA sequence and the length of the pattern that we are looking for 
 #Output - A list of all the possible patterns and their frequency; from which we then print the patterns that appear maximum number of times. 
