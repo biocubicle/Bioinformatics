@@ -39,3 +39,8 @@ Skew calculations: # Finding the (total number of G) - (total number of C) inord
 Identifying the minimum skew positions: #Finding the locations in the genome where the skew is minimum inorder to get an estimate for the OriC
 #Input - Genome Sequence
 #Output - The positions where the skew is minimum
+
+
+Hammings Distance: #Finding the number of mismatches between two strings - i.e. Hammings Distance
+#Input - Two genome sequences of equal length with mismatches
+#Output- the number of mismatches between the two inputs
