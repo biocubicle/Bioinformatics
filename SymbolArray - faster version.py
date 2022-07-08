@@ -1,4 +1,4 @@
-##Finding the frequency of a base in a half strand from a specific postion in the genome.
+#Finding the frequency of a base in a half strand from a specific postion in the genome.
 
 #Input - A sequence of the genome and a particular symbol corresponding to a base
 #Output - A dictionary which tells us the number of that base in that window at differnt positions in the genome.
