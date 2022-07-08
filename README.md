@@ -44,3 +44,8 @@ Identifying the minimum skew positions: #Finding the locations in the genome whe
 Hammings Distance: #Finding the number of mismatches between two strings - i.e. Hammings Distance
 #Input - Two genome sequences of equal length with mismatches
 #Output- the number of mismatches between the two inputs
+
+
+Matching the pattern approx: #Finding the positions in the genomw where the given pattern matches approximately if not exactly
+#Input - a genome sequence, a pattern and the number of mistmatches that are acceptable (denoted by d)
+#Output - positions where the patterns match approximately
