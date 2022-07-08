@@ -24,3 +24,8 @@ Pattern Matching: #Find the positions in the genome where the pattern matches wi
 Symbol Array - Slow(running time): #Finding the frequency of a base in a half strand from a specific postion in the genome.
 #Input - A sequence of the genome and a particular symbol corresponding to a base
 #Output - A dictionary which tells us the number of that base in that window at differnt positions in the genome.
+
+
+Symbol Array - Faster(running time): #Finding the frequency of a base in a half strand from a specific postion in the genome.
+#Input - A sequence of the genome and a particular symbol corresponding to a base
+#Output - A dictionary which tells us the number of that base in that window at differnt positions in the genome.
