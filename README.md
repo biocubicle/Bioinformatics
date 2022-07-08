@@ -19,3 +19,8 @@ Working out the reverse complement: #Working out the reverse complement of a str
 Pattern Matching: #Find the positions in the genome where the pattern matches with the sequence at that position/index of the genome
 #Input - A pattern to look for in the DNA sequence and the DNA sequence itself
 #Output - The positions in the genome sequence where the sequence matches with the pattern.
+
+
+Symbol Arrya - Slow(running time): #Finding the frequency of a base in a half strand from a specific postion in the genome.
+#Input - A sequence of the genome and a particular symbol corresponding to a base
+#Output - A dictionary which tells us the number of that base in that window at differnt positions in the genome.
