@@ -34,3 +34,8 @@ Symbol  - Faster(running time): #Finding the frequency of a base in a half stran
 Skew calculations: # Finding the (total number of G) - (total number of C) inorder to understand the skew of the genome to locate the oriC
 #Input - genome sequence
 #Output - an array with the difference between total G and C numbers
+
+
+Identifying the minimum skew positions: #Finding the locations in the genome where the skew is minimum inorder to get an estimate for the OriC
+#Input - Genome Sequence
+#Output - The positions where the skew is minimum
