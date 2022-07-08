@@ -29,3 +29,8 @@ Symbol  - Slow(running time): #Finding the frequency of a base in a half strand 
 Symbol  - Faster(running time): #Finding the frequency of a base in a half strand from a specific postion in the genome.
 #Input - A sequence of the genome and a particular symbol corresponding to a base
 #Output - A dictionary which tells us the number of that base in that window at differnt positions in the genome.
+
+
+Skew calculations: # Finding the (total number of G) - (total number of C) inorder to understand the skew of the genome to locate the oriC
+#Input - genome sequence
+#Output - an array with the difference between total G and C numbers
