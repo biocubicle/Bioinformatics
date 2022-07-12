@@ -49,3 +49,10 @@ Hammings Distance: #Finding the number of mismatches between two strings - i.e. 
 Matching the pattern approx: #Finding the positions in the genomw where the given pattern matches approximately if not exactly
 #Input - a genome sequence, a pattern and the number of mistmatches that are acceptable (denoted by d)
 #Output - positions where the patterns match approximately
+
+
+Finding the motif: #Finding the motif :
+    # Different genes that are regulated by regulatory proteins (which in turn are encoded by "clock" genes)
+    # These regulatory proteins recognise regulatory moti upstream different genes.
+    # These motifs have different variations from an optimal sequence, and to identify these conserved motifs we carryout this process.
+    # From a t number of DNA strings (length n), we select k-mers for each string and form a collection of possible motifs. This collection is than worked on to             identify the conserved seq.
