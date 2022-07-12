@@ -1,8 +1,8 @@
 #Finding the motif :
-    # Different genes that are regulated by regulatory proteins (which in turn are encoded by "clock" genes)
-    # These regulatory proteins recognise regulatory moti upstream different genes.
+    # Different genes are regulated by regulatory proteins (which in turn are encoded by "clock" genes)
+    # These regulatory proteins recognise regulatory motifs upstream different genes.
     # These motifs have different variations from an optimal sequence, and to identify these conserved motifs we carryout this process.
-    # From a t number of DNA strings (length n), we select k-mers for each string and form a collection of possible motifs. This collection is than worked on to identify the conserved seq.
+    # From a t number of DNA strings (length n), we select k-mers for each string and form a collection of possible motifs. This collection is then worked on to             identify the conserved seq.
 
 # Part I: The count matrix
 #Input - a set of kmer motifs stored as a list
