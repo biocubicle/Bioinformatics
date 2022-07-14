@@ -57,5 +57,5 @@ Finding the motif: #Finding the motif
 
 
 #Finding the motif - greedy search approach
-#The approach that was previously mentioned used the Brute Search techinique - chceking for every possible answer and then settling on the most accurate one.
-# But since it is time consuming, now the greedy approach will be employed - which might not result in the most accurate answer for each iteration - it is not too bad!
+#The approach that was previously mentioned used the Brute Search techinique - chceking for every possible answer and then settling on the most accurate one. # But since it is time consuming, now the greedy approach will be employed - which might not result in the most accurate answer for each iteration - it is not too bad! 
+
