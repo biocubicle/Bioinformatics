@@ -56,6 +56,10 @@ Finding the motif: #Finding the motif
 #Output - different matrices that aid in identifying a consensus sequence and allows us to score different kmers based on similarity. 
 
 
-#Finding the motif - greedy search approach
+Finding the motif - greedy search approach: #Finding the motif - greedy search approach
 #The approach that was previously mentioned used the Brute Search techinique - chceking for every possible answer and then settling on the most accurate one. # But since it is time consuming, now the greedy approach will be employed - which might not result in the most accurate answer for each iteration - it is not too bad! 
 
+
+Entrpy calculation: #Calculating the entrophy for a given profile matrix
+#Input - a set of values for probability
+#Output - the entropy for that profile matrix.
