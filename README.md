@@ -54,3 +54,8 @@ Matching the pattern approx: #Finding the positions in the genomw where the give
 Finding the motif: #Finding the motif
 #Input - kmers / (A set of DNA strings with a value of k) 
 #Output - different matrices that aid in identifying a consensus sequence and allows us to score different kmers based on similarity. 
+
+
+#Finding the motif - greedy search approach
+#The approach that was previously mentioned used the Brute Search techinique - chceking for every possible answer and then settling on the most accurate one.
+# But since it is time consuming, now the greedy approach will be employed - which might not result in the most accurate answer for each iteration - it is not too bad!
