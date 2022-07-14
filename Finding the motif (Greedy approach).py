@@ -88,16 +88,17 @@ def Pr(Text, Profile):
     return p
 
 
-def ProfileMostProbablePattern(text,k,profile):
-    p=-1
-    result=text[0:k]
-    for i in range(len(text)-k+1):
-        seq=text[i:i+k]
-        pr=Pr(seq,profile)
-        if pr>p:
-            p=pr
-            result=seq
-    return result
+def ProfileMostProbableKmer(Text, k, Profile):
+    prob_cnt = 0
+    frequent = Text[:k] #we are tring to define the length of a kmer if it has to be a part of this variable
+    n = len(Text)
+    for i in range(n-k +1):
+        kmer = Text[i:i+k] #what is a kmer?
+        probability = Pr(kmer, Profile) #calling the previously defined probability function
+        if probability > prob_cnt: #if this probability is greater than 0/the previously calculated probability
+            prob_cnt = probability #keep updating the value of this cnt to find the kmer with the highest probability
+            frequent = kmer #include this kmer in the variable
+    return frequent
 
 def GreedyMotifSearch(Dna,k,t):
     BestMotifs = []
