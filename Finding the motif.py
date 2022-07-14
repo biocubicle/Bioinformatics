@@ -1,6 +1,6 @@
 #Finding the motif :
-#Input - kmers / (A set of DNA strings with a value of k) 
-#Output - different matrices that aid in identifying a consensus sequence and allows us to score different kmers based on similarity. 
+#Input - kmers / (A set of DNA strings with a value of k)
+#Output - different matrices that aid in identifying a consensus sequence and allows us to score different kmers based on similarity.
 
     # Different genes are regulated by regulatory proteins (which in turn are encoded by "clock" genes)
     # These regulatory proteins recognise regulatory motifs upstream different genes.
@@ -69,4 +69,7 @@ def Score(Motifs):
                 score += 1
     return score #This will sum the frequency of all the mismatched symbols in a column in comparison to the consensus seq.
 
+moti = [""] 
+#print(Score(moti))
+#print(Consensus(moti))
 # We now have a score that will allow us to determine what a consensus seq might look like and. We can also score our matrix based on this consensus. Hence we can narrow down on a matrix which will give the lowest possible score.
