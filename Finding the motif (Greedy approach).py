@@ -116,5 +116,5 @@ def GreedyMotifSearch(Dna,k,t):
     return BestMotifs
 Dna = [""]
 t=len(Dna)
-k=15
+k=
 Motifs = GreedyMotifSearch(Dna, k, t)
