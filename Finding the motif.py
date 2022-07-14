@@ -1,38 +1,41 @@
 #Finding the motif :
+#Input - kmers / (A set of DNA strings with a value of k) 
+#Output - different matrices that aid in identifying a consensus sequence and allows us to score different kmers based on similarity. 
+
     # Different genes are regulated by regulatory proteins (which in turn are encoded by "clock" genes)
-    # These regulatory proteins recognise regulatory motifs or transcription binding sites upstream different genes.
-    # These sites have different variations from an optimal sequence (consensus), and to identify this ideal conserved sequence, we carryout this process.
-    # From a t number of DNA strings (length n), we select k-mers for each string and form a collection of possible motifs. This collection is then worked on to identify the consensus seq.
+    # These regulatory proteins recognise regulatory motifs upstream different genes.
+    # These motifs have different variations from an optimal sequence, and to identify these conserved motifs we carryout this process.
+    # From a t number of DNA strings (length n), we select k-mers for each string and form a collection of possible motifs. This collection is then worked on to             identify the conserved seq.
 
 # Part I: The count matrix
-#Input - a set of kmer motifs stored as a list where i refers to each sequence and j refers to the nucleotide at that index in that sequence. 
-#Output - a dictionary that stores the number of times nucleotide i appears in column j of motifs. 
+#Input - a set of kmer motifs stored as a list
+#Output - a dictionary that stores the number of times a symbol j appears in the string i.
 
 def Count(Motifs):
     count = {} # an empty dictionary
-    k = len(Motifs[0]) # it is the number of symbols in the first string of our motifs dictionary (first row of the dictionary)
+    k = len(Motifs[0]) # it is the number of symbols j in the first string of our motifs dictionary (first row of the dictionary)
     for symbol in "ACGT":
         count[symbol] = [] # we create an empty list in the dicitionary for every symbol: ACGT
-        for j in range(k): 
+        for j in range(k): # j refers to the symbol# in the matrix and in this case each column of the first row is the range for this loop (the frequency of each symbol j will be counted column wise )
              count[symbol].append(0) # assign the frequency of each symbol present column-wise to 0 (these symbols are the keys of the dictionary)
     t = len(Motifs) # number of motifs (number of strings in the matrix)
     for i in range(t): # for the string in the matrix
         for j in range(k): # for the columns in the first motif
-            char = Motifs[i][j] #char is being defined here
-            count[char][j] += 1 # add 1 once you encounter a char in a particular column of the matrix
+            symbol = Motifs[i][j] #symbol is being defined here
+            count[symbol][j] += 1 # add 1 once you encounter a symbol in a particular column of the matrix
     return count
 
 #Part II: The profile matrix
 # Input - a set of kmer motifs stored as a list
-# Output - a profile matrix of the set of motifs (where the sum of each column = 1) 
+# Output - a profile matrix of the set of motifs
 
 def Profile(Motifs):
     profile = {} #empty dictionary
     profile = Count(Motifs) #we assign that dictionary to contain the values of counts using the previously defined count function
     t = len(Motifs) # number of strings
     k = len(Motifs[0]) # number of characters in the first string
-    for i in profile: #for the rows in the profile matrix whithin which look...
-        for j in range(k): # ...for the colums and make changes by carrying out the next line 
+    for i in profile:
+        for j in range(k):
             profile[i][j] = profile[i][j]/t # an element in profile is equal to that element's value calculated using count divided by the number of string
     return profile
 
@@ -53,8 +56,6 @@ def Consensus(Motifs):
         consensus += frequentSymbol # update the consensus variable for the frequent symbol of each column
     return consensus
 
-# So far, we now have a sequence for the ideal sequence and can now compare it with other kmers based on similarity. For this, we need to score them. 
-
 #Part IV: Score
 # Input - a set of kmer motifs stored as a list
 # Output- a score for the kmers
@@ -68,4 +69,4 @@ def Score(Motifs):
                 score += 1
     return score #This will sum the frequency of all the mismatched symbols in a column in comparison to the consensus seq.
 
-# We now have a way to score the kmers with a consensus sequence and use it to choose a matrix with the lowest possible score. 
+# We now have a score that will allow us to determine what a consensus seq might look like and. We can also score our matrix based on this consensus. Hence we can narrow down on a matrix which will give the lowest possible score.
