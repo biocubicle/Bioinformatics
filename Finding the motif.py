@@ -1,25 +1,25 @@
 #Finding the motif :
     # Different genes are regulated by regulatory proteins (which in turn are encoded by "clock" genes)
-    # These regulatory proteins recognise regulatory motifs upstream different genes.
-    # These motifs have different variations from an optimal sequence, and to identify these conserved motifs we carryout this process.
-    # From a t number of DNA strings (length n), we select k-mers for each string and form a collection of possible motifs. This collection is then worked on to             identify the conserved seq.
+    # These regulatory proteins recognise regulatory motifs or transcription binding sites upstream different genes.
+    # These sites have different variations from an optimal sequence (consensus), and to identify this ideal conserved sequence, we carryout this process.
+    # From a t number of DNA strings (length n), we select k-mers for each string and form a collection of possible motifs. This collection is then worked on to identify the consensus seq.
 
 # Part I: The count matrix
-#Input - a set of kmer motifs stored as a list
-#Output - a dictionary that stores the number of times a symbol j appears in the string i.
+#Input - a set of kmer motifs stored as a dictionary where i refers to each string and j refers to the columns of the motifs.  
+#Output - a dictionary that stores the number of times nucleotide i appears in column j of motifs. 
 
 def Count(Motifs):
     count = {} # an empty dictionary
-    k = len(Motifs[0]) # it is the number of symbols j in the first string of our motifs dictionary (first row of the dictionary)
+    k = len(Motifs[0]) # it is the number of symbols in the first string of our motifs dictionary (first row of the dictionary)
     for symbol in "ACGT":
         count[symbol] = [] # we create an empty list in the dicitionary for every symbol: ACGT
-        for j in range(k): # j refers to the symbol# in the matrix and in this case each column of the first row is the range for this loop (the frequency of each symbol j will be counted column wise )
+        for j in range(k): # j refers to the column# in the matrix and in this case each column of the first row is the range for this loop 
              count[symbol].append(0) # assign the frequency of each symbol present column-wise to 0 (these symbols are the keys of the dictionary)
     t = len(Motifs) # number of motifs (number of strings in the matrix)
     for i in range(t): # for the string in the matrix
         for j in range(k): # for the columns in the first motif
-            symbol = Motifs[i][j] #symbol is being defined here
-            count[symbol][j] += 1 # add 1 once you encounter a symbol in a particular column of the matrix
+            char = Motifs[i][j] #char is being defined here
+            count[char][j] += 1 # add 1 once you encounter a char in a particular column of the matrix
     return count
 
 #Part II: The profile matrix
