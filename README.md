@@ -63,3 +63,9 @@ Finding the motif - greedy search approach: #Finding the motif - greedy search a
 Entrpy calculation: #Calculating the entrophy for a given profile matrix
 #Input - a set of values for probability
 #Output - the entropy for that profile matrix.
+
+
+#Modifying the Greedy Search approach to prevent the elimination of a possible kmer only due to one mismatch with the consensus (due to which the kmers probability equated to zero and results in its elimination).
+    #Cromwell's rule states that we should not equate the probability of an event to 0 ot 1 unless it is a logical statement.
+    #To improve the scoring, the 0's can be substituted with small numbers known as pseudocounts.
+    #These pseudocounts are introduced using Laplace's rule of succession. (+1 to each element of Count(Motifs))
