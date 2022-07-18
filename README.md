@@ -69,3 +69,8 @@ Entrpy calculation: #Calculating the entrophy for a given profile matrix
     #Cromwell's rule states that we should not equate the probability of an event to 0 ot 1 unless it is a logical statement.
     #To improve the scoring, the 0's can be substituted with small numbers known as pseudocounts.
     #These pseudocounts are introduced using Laplace's rule of succession. (+1 to each element of Count(Motifs))
+
+
+Clump_finding algo: #Identifying a clump in window L, using a given sequence and k-length.
+#Input - The genome in which you want to look for pattern, the length of the pattern you are looking for, a window of length L in which to scan for pattern (per iteration of the algo)
+#Output - All the kmers that can be considered as a significant clump
